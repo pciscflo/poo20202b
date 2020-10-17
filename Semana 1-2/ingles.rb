@@ -1,3 +1,12 @@
+=begin
+ Se requiere una aplicación que permita crear alumnos en un instituto de inglés
+ y permita determinar si es que han pasado el nivel o no. Los alumnos tienen, 
+ además de su código y nombre, dos valores que son las pruebas llamadas T1 y T2.
+ En caso tengan 85 puntos en ambas pruebas el alumno está en aprobado.
+ En caso solamente tenga una de las dos pruebas con 85 o más puntos entonces
+ está como observado. Si es que ninguna de las dos tiene 85 puntos entonces
+ está reprobado. Modelar y códificar la clase que permita realizar lo solicitado.  
+=end
 class Alumno
    def initialize(codigo, nombre, t1, t2)
    	@codigo = codigo
