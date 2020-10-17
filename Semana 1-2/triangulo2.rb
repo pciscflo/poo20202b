@@ -1,3 +1,15 @@
+=begin 
+ Un Matemático desea calcular el área de un triángulo dado sus lados,
+ realice un programa que permita ingresar los lados del triángulo e imprima su área.
+ El área de un triángulo se calcula así:
+
+  area =Math.sqrt(p(p-a)(p-b)(p-c))
+
+ Donde p = (a+b+c)/2
+
+ a, b, c son los lados del triángulo.
+=end
+
 class Triangulo
    attr_reader :a, :b, :c
    def initialize(a, b, c)
