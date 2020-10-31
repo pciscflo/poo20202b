@@ -39,6 +39,7 @@ class Item
    	return cantidad*producto.precioUnitario
    end
 end
+
 class Producto
 	attr_reader :codigo, :descripcion, :precioUnitario
 	def initialize(codigo, descripcion, precioUnitario)
@@ -46,7 +47,6 @@ class Producto
         @descripcion = descripcion
         @precioUnitario = precioUnitario #inlcuido igv
 	end
-
 end
 
 ####################### prueba
