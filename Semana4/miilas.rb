@@ -55,5 +55,20 @@ class Aerolinea
    	  	end
    	  end
    end
+   def comprarMillas(monto, dni)
 
+   end
 end
+aerolinea = Aerolinea.new
+socio = Socio.new("88888888","Pepe")
+tarjeta = Tarjeta.new(socio, 10000)
+socio2 = Socio.new("9999999","Carlos")
+tarjeta2 = Tarjeta.new(socio2, 50000)
+aerolinea.registrar(tarjeta)
+aerolinea.registrar(tarjeta2)
+puts aerolinea.calcularMillasAcumuladasTodos
+aerolinea.comprarMillasPremium(2000)
+puts aerolinea.calcularMillasAcumuladasTodos
+
+
+
