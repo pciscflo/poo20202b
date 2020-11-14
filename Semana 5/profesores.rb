@@ -56,6 +56,16 @@ class Administrador
    	  	puts "#{profesor.nombre}   #{profesor.calcularSueldo}"
    	  end
    end
+   def obtenerProfesorGanaMas
+      maximo = 0
+      for profesor in arregloProfesores
+        if profesor.calcularSueldo>maximo
+          maximo = profesor.calcularSueldo
+          profe = profesor
+        end
+      end
+      return profe
+   end
 end
 ###############
 
@@ -67,5 +77,8 @@ adm.registrar(ptp1)
 #puts ptc1.calcularSueldo
 #puts ptp1.calcularSueldo
 adm.imprimirListado
+p = adm.obtenerProfesorGanaMas
+puts "-----------------------"
+puts "Nombre del que gana mas: #{p.nombre} y gana #{p.calcularSueldo}"
 
 
