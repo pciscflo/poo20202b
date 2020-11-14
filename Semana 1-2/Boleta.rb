@@ -1,4 +1,4 @@
-|class Boleta
+class Boleta
 	def initialize(codigo,fecha, nombreFuncion, precio)
 		@codigo,@fecha,@nombreFuncion,@precio = codigo,fecha,nombreFuncion,precio
 	end
