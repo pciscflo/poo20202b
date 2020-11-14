@@ -18,6 +18,8 @@ class Profesor
    end
    def calcularSueldo #método polimorfico se implementa en las subclases respectivas
    end
+   def dameTipo
+   end
 end
 class ProfesorTC < Profesor
     attr_reader :sueldoFijo, :afp
@@ -28,6 +30,9 @@ class ProfesorTC < Profesor
     end
     def calcularSueldo
     	sueldoFijo - afp*sueldoFijo
+    end
+    def dameTipo
+      "TC"
     end
 end
 class ProfesorTP < Profesor
@@ -40,7 +45,9 @@ class ProfesorTP < Profesor
     def calcularSueldo
     	tarifaHora*horasTrabajadas
     end
-
+    def dameTipo
+      "TP"
+    end
 end
 
 class Administrador
@@ -55,6 +62,14 @@ class Administrador
    	  for profesor in arregloProfesores
    	  	puts "#{profesor.nombre}   #{profesor.calcularSueldo}"
    	  end
+   end
+   def imprimirListadoTipo(tipo)
+      puts "-- LISTADO POR #{tipo} ---------"
+      for profesor in arregloProfesores
+        if profesor.dameTipo==tipo
+           puts "#{profesor.nombre}   #{profesor.calcularSueldo}"
+        end
+      end
    end
    def obtenerProfesorGanaMas
       maximo = 0
@@ -80,5 +95,6 @@ adm.imprimirListado
 p = adm.obtenerProfesorGanaMas
 puts "-----------------------"
 puts "Nombre del que gana mas: #{p.nombre} y gana #{p.calcularSueldo}"
+adm.imprimirListadoTipo("TC")
 
 
